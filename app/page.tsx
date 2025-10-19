@@ -40,7 +40,7 @@ export default async function Home() {
                 <AvatarImage src={`/img/${recipe.image}`} alt="recipe img" />
                 <AvatarFallback>{recipe.title.slice(0, 2)}</AvatarFallback>
               </Avatar>
-              <div>
+              <div className="flex flex-col gap-2">
                 <CardTitle>{recipe.title}</CardTitle>
                 <CardDescription>{recipe.time} mins to cook</CardDescription>
               </div>
@@ -52,7 +52,7 @@ export default async function Home() {
               <Button className="cursor-pointer" variant="outline">
                 View Recipe{" "}
               </Button>
-              {recipe.vegan && <Badge>Vegan</Badge>}
+              {recipe.vegan && <Badge variant="default">Vegan</Badge>}
             </CardFooter>
           </Card>
         ))}
